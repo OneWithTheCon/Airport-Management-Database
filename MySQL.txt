@@ -1,0 +1,12 @@
+CREATE TABLE `flight_details` (
+  `F_No` int NOT NULL,
+  `F_Name` char(35) NOT NULL,
+  `Airline` char(30) NOT NULL,
+  `Destination` char(40) NOT NULL,
+  `Depart_Time` time NOT NULL,
+  `Passenger_ID` int NOT NULL,
+  `Ticket_ID` int NOT NULL,
+  PRIMARY KEY (`F_No`),
+  UNIQUE KEY `Ticket_ID_UNIQUE` (`Ticket_ID`),
+  UNIQUE KEY `Passenger_ID_UNIQUE` (`Passenger_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
